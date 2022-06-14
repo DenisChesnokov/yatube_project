@@ -18,8 +18,8 @@ from django.urls import include, path
 
 urlpatterns = [
     # импорт правил из приложения posts
-    path('group/<slug:slug>/', include('posts.urls')),
     path('', include('posts.urls')),
+    path('group/<slug:slug>/', include('posts.urls')),
     # общие правила
     path('admin/', admin.site.urls),
 ]
