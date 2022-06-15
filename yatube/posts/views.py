@@ -1,4 +1,4 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 
 from django.http import HttpResponse
 
@@ -7,9 +7,10 @@ from django.http import HttpResponse
 
 # Главная страница
 def index(request):
-    return HttpResponse('Главная страница проекта Yatube')
-
+    template = 'posts/index.html'
+    return render(request, template) 
 
 # Страница с постами отфильтованными по группам
-def group_posts(request, slug):
-    return HttpResponse(f'Страница с постами группы: {slug}')
+def group_posts(request):
+    template = 'posts/group_list.html'
+    return render(request, template) 
