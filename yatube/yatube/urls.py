@@ -19,8 +19,8 @@ from django.urls import include, path
 urlpatterns = [
     # импорт правил из приложения posts
     path('', include('posts.urls', namespace='posts')),
-    path('index.html', include('posts.urls', namespace='posts')),
-    path('group_list.html', include('posts.urls', namespace='posts')),
+    #path('index.html', include('posts.urls', namespace='posts')),
+    #path('group_list.html', include('posts.urls', namespace='posts')),
     # общие правила
     path('admin/', admin.site.urls),
 ]
